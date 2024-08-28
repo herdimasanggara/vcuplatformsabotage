@@ -5,16 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Platform Sabotage: Instruction Manual</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      .link {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 5px 0;
+        font-weight: bold;
+      }
+      
+      .link:hover {
+        color: yellow;
+      }
+
+      .nested-links {
+        padding-left: 20px;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <!-- Leftmost column: Navigation -->
       <nav class="left-column">
-        <ul>
-          <li><div class="link" onclick="location.href='page2.html'">08/28, HTML (1/2)</div></li>
-          <li><div class="link" onclick="location.href='page1.html'">08/21, Intro</div></li>
-          <!-- Add more dates as needed -->
-        </ul>
+        <div class="link" onclick="location.href='page2.html'">08/28, HTML (1/2)</div>
+        <div class="nested-links">
+          <div class="link" onclick="location.href='htmlexp1.html'">Experiment 1</div>
+          <div class="link" onclick="location.href='htmlexp2.html'">Experiment 2</div>
+        </div>
+        <div class="link" onclick="location.href='page1.html'">08/21, Intro</div>
+        <!-- Add more dates as needed -->
       </nav>
 
       <!-- Center column: Main content -->
