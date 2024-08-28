@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Sabotage, 08/28, HTML Experiment (1/2)</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Leftmost column: Navigation to go back to index -->
+      <nav class="left-column">
+        <ul>
+          <li><div class="link" onclick="location.href='index.html'">Home</div></li>
+        </ul>
+      </nav>
+
+      <!-- Center column: Instructions -->
+      <main class="center-column">
+        <div class="title">08/28, HTML (1/2)</div>
+
+        <!-- Replace <ol> and <li> with divs for styling -->
+        <div class="list-item">
+          <div class="instructions">
+            <p>For the first exercise, you'll only use <code>&lt;pre&gt;</code>. Start by creating a new HTML file named <strong>htmlexp1.html</strong> with this basic structure:</p>
+            <div class="code-block">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Form Art (1/2)&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Your ASCII art will go here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+
+            <p>Next, use the <code>&lt;pre&gt;</code> tag to create preformatted text that maintains spacing and line breaks exactly as you type them. This is ideal for ASCII art. For example:</p>
+            <div class="code-block">&lt;pre&gt;
+     ,    ,
+    /(____)\
+   (  o  o  )
+   |  (__)  |
+    \ '--' /
+    |      |
+&lt;/pre&gt;</div>
+              
+            <p>Try creating your ASCII art without the <code>&lt;pre&gt;</code> tag and using <code>&lt;br&gt;</code> instead to see how it affects the formatting.</p>
+          </div>
+        </div>
+
+        <div class="list-item">
+          <div class="instructions">
+            <p>Now, expand your ASCII art by experimenting with additional HTML tags to create textures and patterns. Create a new HTML file named <strong>htmlexp2.html</strong> and use the following basic structure:</p>
+            <div class="code-block">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Form Art (2/2)&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Your textured art will go here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+
+            <p>Use heading tags <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> to vary text sizes and create visual hierarchy. For example:</p>
+            <div class="code-block">&lt;h1&gt;Big Text&lt;/h1&gt;
+&lt;h2&gt;Slightly Smaller&lt;/h2&gt;
+&lt;h3&gt;Even Smaller&lt;/h3&gt;
+&lt;h4&gt;And Smaller&lt;/h4&gt;
+&lt;h5&gt;Almost Tiny&lt;/h5&gt;
+&lt;h6&gt;Smallest&lt;/h6&gt;</div>
+
+            <p>Combine different text styles like <code>&lt;u&gt;</code> for underline, <code>&lt;i&gt;</code> for italics, <code>&lt;b&gt;</code> for bold, and <code>&lt;s&gt;</code> for strikethrough to create more textures:</p>
+            <div class="code-block">&lt;p&gt;&lt;u&gt;Underlined Text&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;Italicized Text&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Bold Text&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;s&gt;Strikethrough Text&lt;/s&gt;&lt;/p&gt;</div>
+
+            <p>Mix and match these tags to create unique patterns and observe how they relate to the imagined object or concept.</p>
+          </div>
+        </div>
+      </main>
+
+      <!-- Rightmost column: Miscellaneous content -->
+      <aside class="right-column">
+        <div class="text">
+          Remember to experiment with different combinations to see what textures and patterns you can create.
+        </div>
+        <div class="text">
+          <p><code><strong>&lt;br&gt;</strong></code>: Inserts a line break.</p>
+          <p><code><strong>&amp;nbsp;</strong></code>: Adds a non-breaking space, which is a space that prevents automatic line breaks at its position.</p>
+          <p><code><strong>&lt;pre&gt;</strong></code>: Preserves whitespace and line breaks in the enclosed text, making it ideal for preformatted text like ASCII art.</p>
+          <p><code><strong>&lt;h1&gt; to &lt;h6&gt;</strong></code>: Heading tags that define the size and importance of text. <code>&lt;h1&gt;</code> is the largest, while <code>&lt;h6&gt;</code> is the smallest.</p>
+          <p><code><strong>&lt;u&gt;</strong></code>: Underlines the enclosed text.</p>
+          <p><code><strong>&lt;i&gt;</strong></code>: Italicizes the enclosed text.</p>
+          <p><code><strong>&lt;b&gt;</strong></code>: Makes the enclosed text bold.</p>
+          <p><code><strong>&lt;s&gt;</strong></code>: Strikes through the enclosed text, indicating that it is incorrect or no longer relevant.</p>
+        </div>          
+      </aside>
+    </div>
+  </body>
+</html>

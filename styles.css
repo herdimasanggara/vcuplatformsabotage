@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.left-column, .right-column {
+    width: 20%;
+    background-color: black;
+    color: white;
+    overflow-y: auto;
+    padding: 30px; /* Uniform padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the top */
+}
+
+.center-column {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+    background-color: yellow;
+    overflow-y: auto;
+}
+
+/* Replacing h1, h2, and p with div for consistent styling */
+div.title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em; /* Approximate size of h1 */
+    font-weight: bold;
+}
+
+div.subtitle {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5em; /* Approximate size of h2 */
+    font-weight: bold;
+}
+
+div.text {
+    margin-bottom: 20px; /* Adds space below each text block */
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    width: 100%;
+    max-width: 520px;
+}
+
+/* Updated list styling */
+div.list-item {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+    width: 100%;
+    max-width: 560px;
+    text-align: left;
+}
+
+/* Replacing pre with div for code styling */
+div.code-block {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    overflow-x: auto;
+    white-space: pre-wrap; /* Ensures line breaks in preformatted text */
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    color: blue;
+    margin: 15px 0;
+    max-width: 600px;
+}
+
+code {
+    background-color: yellow;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    color: blue;
+}
+
+/* Replacing a with div for links */
+div.link {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+div.link:hover {
+    text-decoration: underline;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li div.link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li div.link:hover {
+    color: yellow;
+}
