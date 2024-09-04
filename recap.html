@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platform Sabotage, 08/21, Intro</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Custom styles for the Flexbox layout */
+      .example-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        max-width: 560px;
+        margin-top: 20px;
+      }
+
+      .example-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .example-cell {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        width: calc(50% - 10px); /* Two columns, with a gap of 10px */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-family: "Courier New", Courier, monospace;
+        color: blue;
+        text-align: center;
+      }
+
+      .example-cell-code {
+        color: black;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .example-cell-desc {
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Leftmost column: Navigation to go back to index -->
+      <nav class="left-column">
+        <div class="link" onclick="location.href='index.html'">Home</div>
+      </nav>
+
+      <!-- Center column: Instructions -->
+      <main class="center-column">
+        <div class="title">Recap, 08/28</div>
+
+        <!-- Explanation section using divs for custom styling -->
+        <div class="list-item">
+          <strong>Why should the main page be called <code>index.html</code>?</strong><br /><br>
+          The file <code>index.html</code> is the default file that web servers look for when loading a website. It acts as the entry point of your site. If you name it something else, like <code>home.html</code>, the server might not automatically find it, requiring users to type the full URL to access the page.
+        </div>
+
+        <div class="list-item">
+          <strong>Why is proper syntax important?</strong><br /><br>
+          Proper syntax ensures that your HTML is interpreted correctly by browsers. Incorrect syntax can lead to unexpected behavior or a broken webpage. For example, consider the following incorrect HTML code:<br><br>
+          
+          <div class="code-block">&lt;p&gt;Hello, world!&lt;p&gt;Welcome to my site!&lt;/p&gt;</div><br>
+          
+          In this example:<br>
+          - The first <code>&lt;p&gt;</code> tag is not properly closed before the second <code>&lt;p&gt;</code> starts.<br>
+          - This mistake could cause all subsequent content to be incorrectly formatted, as the browser tries to interpret the missing closing tag.<br><br>
+          
+          The correct syntax should be:<br><br>
+          
+          <div class="code-block">&lt;p&gt;Hello, world!&lt;/p&gt;&lt;p&gt;Welcome to my site!&lt;/p&gt;</div><br>
+          
+          By using proper syntax, you ensure your webpage is displayed correctly and consistently across different browsers.
+        </div>
+
+        <div class="list-item">
+          <strong>Why is closing tags important?</strong><br /><br>
+          Closing tags like <code>&lt;/b&gt;</code> indicate where formatting should end. If you don't close a tag, the browser might apply formatting to more content than intended, causing layout issues and unexpected results.
+        </div>
+
+        <div class="list-item">
+          <strong>Why does text not display next to each other?</strong><br /><br>
+          You might think that using elements like <code>&lt;h1&gt;Big Title&lt;/h1&gt;&lt;h2&gt;Medium Title&lt;/h2&gt;</code> would make the titles appear next to each other, like in a line. But that's not how it works! These elements are "block-level," which means they automatically take up the full width and start on a new line.<br><br>
+        
+          For example, if you write this HTML:<br><br>
+          
+          <div class="code-block">&lt;h1&gt;Big Title&lt;/h1&gt;&lt;h2&gt;Medium Title&lt;/h2&gt;&lt;h3&gt;Small Title&lt;/h3&gt;</div><br>
+          
+          It won't show the titles in a row. Instead, it will look like this:<br><br>
+          
+          <h1>Big Title</h1><h2>Medium Title</h2><h3>Small Title</h3><br>
+        
+          The same thing happens with paragraph tags like <code>&lt;p&gt;Hello, World!&lt;/p&gt;&lt;p&gt;Welcome to my page!&lt;/p&gt;</code>. You might expect "Hello, World! Welcome to my page!" to be on one line, but it will actually display like this:<br><br>
+          
+          <div class="code-block">Hello, world!<br>Welcome to my page!</div><br>
+        
+          This happens because both headings and paragraphs are block elements, meaning they automatically start on a new line. If you want them to appear side-by-side, you can use inline elements like <code>&lt;span&gt;</code>, which do not force a new line.<br><br>
+
+          On a pure HTML site, you technically don't need <code>&lt;p&gt;</code> tags or <code>&lt;span&gt;</code> tags if you just want text to flow together on a single line. You can write text directly in the HTML like this:<br><br>
+
+          <div class="code-block">Hello, world! Welcome to my site!</div><br>
+
+          And it will display inline, one after the other.
+        </div>
+
+        <!-- New section: Self-Closing and Non-Self-Closing Tags -->
+        <div class="list-item">
+            <strong>Why are some tags self-closing while others require a closing tag?</strong><br /><br>
+            Self-closing tags, such as <code>&lt;br&gt;</code>, <code>&lt;img&gt;</code>, and <code>&lt;hr&gt;</code>, do not need a closing tag because they represent elements that do not contain any content or child elements. These tags perform specific functions, like inserting a line break or displaying an image, without enclosing any content. <br><br>
+          
+            In contrast, tags that require a closing tag, such as <code>&lt;b&gt;text&lt;/b&gt;</code> or <code>&lt;p&gt;paragraph content&lt;/p&gt;</code>, are used to wrap content or child elements. The opening tag marks the beginning of the element, while the closing tag signifies its end. This structure is essential for properly formatting or displaying the enclosed content on the webpage.
+          
+          <div class="example-container">
+            <div class="example-row">
+              <div class="example-cell">
+                <div class="example-cell-code">&lt;br&gt;</div>
+                <div class="example-cell-desc">Line break</div>
+              </div>
+              <div class="example-cell">
+                <div class="example-cell-code">&lt;b&gt;text&lt;/b&gt;</div>
+                <div class="example-cell-desc">Bold text</div>
+              </div>
+            </div>
+            <div class="example-row">
+              <div class="example-cell">
+                <div class="example-cell-code">&lt;col&gt;</div>
+                <div class="example-cell-desc">Column</div>
+              </div>
+              <div class="example-cell">
+                <div class="example-cell-code">&lt;i&gt;text&lt;/i&gt;</div>
+                <div class="example-cell-desc">Italic text</div>
+              </div>
+            </div>
+            <div class="example-row">
+              <div class="example-cell">
+                <div class="example-cell-code">&lt;hr&gt;</div>
+                <div class="example-cell-desc">Horizontal line</div>
+              </div>
+              <div class="example-cell">
+                <div class="example-cell-code">&lt;u&gt;text&lt;/u&gt;</div>
+                <div class="example-cell-desc">Underlined text</div>
+              </div>
+            </div>
+            <div class="example-row">
+              <div class="example-cell">
+                <div class="example-cell-code">&lt;img src="..."&gt;</div>
+                <div class="example-cell-desc">Image</div>
+              </div>
+              <div class="example-cell">
+                <div class="example-cell-code">&lt;h1&gt;title&lt;/h1&gt;</div>
+                <div class="example-cell-desc">Heading 1</div>
+              </div>
+            </div>
+            <div class="example-row">
+              <div class="example-cell">
+                <div class="example-cell-code">&lt;audio src="..."&gt;</div>
+                <div class="example-cell-desc">Audio</div>
+              </div>
+              <div class="example-cell">
+                <div class="example-cell-code">&lt;s&gt;text&lt;/s&gt;</div>
+                <div class="example-cell-desc">Strikethrough</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Rightmost column: Miscellaneous content -->
+      <aside class="right-column">
+        <div class="text">
+            In VSCode, there's a visual indicator that highlights errors when your code isn't written correctly. Keep an eye out for these warnings and pay attention to them to catch mistakes early!
+        </div>
+        <div class="text">
+          Remember to save your work often, especially before previewing your webpage. If you don't save, any changes you've made won't show up!
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>

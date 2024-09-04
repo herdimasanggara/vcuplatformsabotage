@@ -10,9 +10,11 @@
     <div class="container">
       <!-- Leftmost column: Navigation to go back to index -->
       <nav class="left-column">
-        <ul>
-          <li><div class="link" onclick="location.href='index.html'">Home</div></li>
-        </ul>
+        <div class="link" onclick="location.href='index.html'">Home</div>
+        <div class="nested-links">
+          <div class="link" onclick="location.href='htmlexp1.html'">Experiment 1</div>
+          <div class="link" onclick="location.href='htmlexp2.html'">Experiment 2</div>
+        </div>
       </nav>
 
       <!-- Center column: Instructions -->
@@ -21,20 +23,21 @@
 
         <!-- Replace <ol> and <li> with divs for styling -->
         <div class="list-item">
-          <div class="instructions">
             <p>For the first exercise, you'll only use <code>&lt;pre&gt;</code>. Start by creating a new HTML file named <strong>htmlexp1.html</strong> with this basic structure:</p>
             <div class="code-block">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Form Art (1/2)&lt;/title&gt;
+    &lt;title&gt;Form Art (1/3)&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
     &lt;!-- Your ASCII art will go here --&gt;
 &lt;/body&gt;
 &lt;/html&gt;</div>
+</div>
 
+<div class="list-item">
             <p>Next, use the <code>&lt;pre&gt;</code> tag to create preformatted text that maintains spacing and line breaks exactly as you type them. This is ideal for ASCII art. For example:</p>
             <div class="code-block">&lt;pre&gt;
      ,    ,
@@ -44,28 +47,33 @@
     \ '--' /
     |      |
 &lt;/pre&gt;</div>
+</div>
+
+<div class="list-item">
               
 <p>Try creating your ASCII art without the <code>&lt;pre&gt;</code> tag and using <code>&lt;br&gt;</code> instead to see how it affects the formatting. Experiment with using emojis (😊, 🚀, 🌟), different glyphs (★, ✿, ☂), and punctuation marks (!, ?, @, #, *) to add variety and texture to your art. See how these characters interact with each other when not preserved by the <code>&lt;pre&gt;</code> tag.</p>
 
-
-          </div>
         </div>
 
+        <hr>
+
         <div class="list-item">
-          <div class="instructions">
+
             <p>Now, expand your ASCII art by experimenting with additional HTML tags to create textures and patterns. Create a new HTML file named <strong>htmlexp2.html</strong> and use the following basic structure:</p>
             <div class="code-block">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Form Art (2/2)&lt;/title&gt;
+    &lt;title&gt;Form Art (2/3)&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
     &lt;!-- Your textured art will go here --&gt;
 &lt;/body&gt;
 &lt;/html&gt;</div>
+            </div>
 
+            <div class="list-item">
             <p>Use heading tags <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> to vary text sizes and create visual hierarchy. For example:</p>
             <div class="code-block">&lt;h1&gt;Big Text&lt;/h1&gt;
 &lt;h2&gt;Slightly Smaller&lt;/h2&gt;
@@ -73,16 +81,21 @@
 &lt;h4&gt;And Smaller&lt;/h4&gt;
 &lt;h5&gt;Almost Tiny&lt;/h5&gt;
 &lt;h6&gt;Smallest&lt;/h6&gt;</div>
+</div>
 
+<div class="list-item">
             <p>Combine different text styles like <code>&lt;u&gt;</code> for underline, <code>&lt;i&gt;</code> for italics, <code>&lt;b&gt;</code> for bold, and <code>&lt;s&gt;</code> for strikethrough to create more textures:</p>
             <div class="code-block">&lt;p&gt;&lt;u&gt;Underlined Text&lt;/u&gt;&lt;/p&gt;
 &lt;p&gt;&lt;i&gt;Italicized Text&lt;/i&gt;&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Bold Text&lt;/b&gt;&lt;/p&gt;
 &lt;p&gt;&lt;s&gt;Strikethrough Text&lt;/s&gt;&lt;/p&gt;</div>
+</div>
 
+<div class="list-item">
             <p>Mix and match these tags to create unique patterns and observe how they relate to the imagined object or concept.</p>
-          </div>
+
         </div>
+
       </main>
 
       <!-- Rightmost column: Miscellaneous content -->

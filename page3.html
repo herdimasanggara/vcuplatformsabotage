@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Sabotage, 09/04, HTML Experiment (2/2)</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Leftmost column: Navigation to go back to index -->
+      <nav class="left-column">
+        <div class="link" onclick="location.href='index.html'">Home</div>
+        <div class="nested-links">
+          <div class="link" onclick="location.href='htmlexp3.html'">Experiment 3</div>
+        </div>
+      </nav>
+
+      <!-- Center column: Instructions -->
+      <main class="center-column">
+        <div class="title">09/04, HTML (2/2)</div>
+
+        <div class="list-item">
+          <p>For this exercise, we will introduce new HTML tags: <code>&lt;table&gt;</code>, <code>&lt;col&gt;</code>, <code>&lt;img&gt;</code>, and <code>&lt;audio&gt;</code>. You will also use inline styles to modify background and text colors. Start by creating a new HTML file named <strong>htmlexp3.html</strong> with this basic structure:</p>
+          <div class="code-block">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;HTML Experiment (3/3)&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Your new experiment will go here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+        </div>
+
+        <div class="list-item">
+          <p>Create a simple table with <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, and <code>&lt;td&gt;</code> tags to structure information. You can use <code>&lt;col&gt;</code> inside a <code>&lt;colgroup&gt;</code> to style columns. For example:</p>
+          <div class="code-block">&lt;table style="width:50%; background-color:white; color:black;"&gt;
+  &lt;colgroup&gt;
+    &lt;col span="2" style="background-color:yellow;"&gt;
+  &lt;/colgroup&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Row 1, Cell 1&lt;/td&gt;
+    &lt;td&gt;Row 1, Cell 2&lt;/td&gt;
+    &lt;td&gt;Row 1, Cell 3&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Row 2, Cell 1&lt;/td&gt;
+    &lt;td&gt;Row 2, Cell 2&lt;/td&gt;
+    &lt;td&gt;Row 2, Cell 3&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</div>
+          
+          <!-- Displaying the table visually, centered -->
+          <table class="centered-table">
+            <colgroup>
+              <col span="2" style="background-color:yellow;">
+            </colgroup>
+            <tr>
+              <td>Row 1, Cell 1</td>
+              <td>Row 1, Cell 2</td>
+              <td>Row 1, Cell 3</td>
+            </tr>
+            <tr>
+              <td>Row 2, Cell 1</td>
+              <td>Row 2, Cell 2</td>
+              <td>Row 2, Cell 3</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="list-item">
+          <p>Add an image using the <code>&lt;img&gt;</code> tag and experiment with inline styles to change its size and border. For example:</p>
+          <div class="code-block">&lt;img src="image.jpg" style="width:200px; height:auto; border:2px solid black;"&gt;</div>
+          <!-- Displaying the image visually, centered (assuming a placeholder image URL) -->
+          <img src="https://via.placeholder.com/200" class="centered-image" style="width:200px; height:auto; border:5px solid yellow;">
+        </div>
+
+        <div class="list-item">
+          <p>Embed audio using the <code>&lt;audio&gt;</code> tag and provide controls for play and pause:</p>
+          <div class="code-block">&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;</div>
+          <!-- Displaying the audio element visually, centered (assuming a placeholder audio URL) -->
+          <audio controls class="centered-audio">
+            <source src="audio.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="list-item">
+          <p>To create a scrolling text effect, use the <code>&lt;marquee&gt;</code> tag. You can customize its behavior, direction, and speed:</p>
+          <div class="code-block">&lt;marquee behavior="scroll" direction="left" scrollamount="5"&gt;This is scrolling text! &lt;/marquee&gt;</div>
+          
+          <!-- Displaying the marquee visually, centered -->
+          <marquee behavior="scroll" direction="left" scrollamount="5">
+            This is scrolling text!
+          </marquee>
+        </div>
+        
+        <div class="list-item">
+          <p>You can also make the text bounce back and forth using the <code>behavior="alternate"</code> attribute:</p>
+          <div class="code-block">&lt;marquee behavior="alternate" direction="left" scrollamount="5"&gt;Bouncing text!&lt;/marquee&gt;</div>
+          
+          <!-- Displaying the bouncing marquee visually, centered -->
+          <marquee behavior="alternate" direction="left" scrollamount="5">
+            Bouncing text!
+          </marquee>
+        </div>
+
+        <hr>
+
+        <div class="list-item">
+          <p>Try combining these elements in creative ways. How can tables and images interact? What textures or visual hierarchies can you create using different tags and inline styles?</p>
+        </div>
+      </main>
+
+      <!-- Rightmost column: Miscellaneous content -->
+      <aside class="right-column">
+        <div class="text">
+          Experiment with the new tags and observe how they change the visual layout and interaction of your webpage.
+        </div>
+        <div class="text">
+          <p><code><strong>&lt;table&gt;</strong></code>: Defines a table to display data in rows and columns.</p>
+          <p><code><strong>&lt;col&gt;</strong></code>: Specifies column properties for each column within a <code>&lt;colgroup&gt;</code>.</p>
+          <p><code><strong>&lt;img&gt;</strong></code>: Embeds an image in the webpage.</p>
+          <p><code><strong>&lt;audio&gt;</strong></code>: Embeds audio content with optional controls.</p>
+        </div>
+        <div class="text">
+          <p><strong>⚠️</strong> We will only use HTML inline styles during this time. In the next session, we will cover CSS, which is the recommended way to handle styling in modern web development.</p>
+        </div>
+        <div class="text">
+          <p><strong>⚠️</strong> The <code>&lt;marquee&gt;</code> tag is deprecated in the majority of browsers. This means it may not display properly or at all, depending on the browser you are using, as many modern browsers no longer support it.</p>
+        </div>
+      </aside>
+      
+    </div>
+  </body>
+</html>
