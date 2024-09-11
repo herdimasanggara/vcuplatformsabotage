@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Sabotage, 09/11, CSS Experiment (1/2)</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Leftmost column: Navigation -->
+      <nav class="left-column">
+        <div class="link" onclick="location.href='index.html'">Home</div>
+        <div class="nested-links">
+          <div class="link" onclick="location.href='cssexp1.html'">CSS Experiment 1</div>
+        </div>
+      </nav>
+
+      <!-- Center column: Main content for CSS basics -->
+      <main class="center-column">
+        <div class="title">09/11, CSS (1/2)</div>
+
+        <!-- Typography -->
+        <div class="list-item">
+            <p><strong>What can you do with typography in CSS?</strong></p>
+          <p>Typography in CSS involves setting font properties like size, weight, style, and family. Try modifying the following text:</p>
+          <div class="code-block">p {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: yellow;
+  background-color: black;
+}</div>
+
+          <!-- Example of typography -->
+          <div style="font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; color: yellow; background-color: black;">
+            This text is styled with custom typography using CSS.
+          </div>
+        </div>
+        
+        <!-- Positioning -->
+        <div class="list-item">
+            <p><strong>How about positioning in CSS?</strong></p>
+
+          <p>CSS positioning allows you to control where an element appears on the page. Here's an example of an absolutely positioned element inside a relatively positioned container:</p>
+          <div class="code-block">.container {
+  width: 300px;
+  height: 300px;
+  background-color: lightgray;
+  position: relative;
+}<br>
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}</div>
+
+          <!-- Visual Example of Positioning -->
+          <div class="container" style="width: 300px; height: 300px; background-color: lightgray; position: relative; margin: 20px auto;">
+            <div class="box" style="width: 100px; height: 100px; background-color: blue; position: absolute; top: 50px; left: 50px;">
+              I'm positioned absolutely!
+            </div>
+          </div>
+          <p>This box is positioned 50px from the top and 50px from the left of its relatively positioned parent container.</p>
+        </div>
+
+
+        <!-- Flexbox -->
+        <div class="list-item">
+            <p><strong>How to create a layout using flexbox?</strong></p>
+
+          <p>Flexbox is a powerful layout tool in CSS. You can use it to align items along a row or column. Try this example:</p>
+          <div class="code-block">.flex-container {
+  display: flex;
+  justify-content: space-between;
+}<br>
+.flex-item {
+  background-color: yellow;
+  padding: 10px;
+  margin: 5px;
+}</div>
+
+          <!-- Example of flexbox -->
+          <div class="flex-container" style="display: flex; justify-content: space-between;">
+            <div class="flex-item" style="background-color: yellow; color: black; padding: 10px; margin: 5px;">Item 1</div>
+            <div class="flex-item" style="background-color: yellow; color: black; padding: 10px; margin: 5px;">Item 2</div>
+            <div class="flex-item" style="background-color: yellow; color: black; padding: 10px; margin: 5px;">Item 3</div>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="list-item">
+            <p>Practice combining typography, positioning, and flexbox. Experiment with different properties to see how they interact and affect your layout.</p>
+          </div>          
+      </main>
+
+      <!-- Rightmost column: Additional CSS tips -->
+      <aside class="right-column">
+        <div class="text">
+          <p><strong>Typography Tips</strong></p>
+          <p>Experiment with <code>letter-spacing</code> to increase or decrease space between characters for stylistic effect. Adjust <code>line-height</code> to control vertical spacing between lines, improving readability. Use <code>text-transform</code> to convert text to uppercase, lowercase, or capitalize each word automatically.</p>
+        </div>
+        <div class="text">
+          <p><strong>Positioning Tips</strong></p>
+          <p>Experiment with <code>z-index</code> to control the stacking order of overlapping elements. Use percentage-based values for <code>top</code>, <code>left</code>, <code>right</code>, and <code>bottom</code> to create responsive layouts that adapt to different screen sizes.</p>
+        </div>
+        <div class="text">
+          <p><strong>Flexbox Tips</strong></p>
+          <p>Use <code>flex-grow</code> to allow items to expand and fill available space, and <code>flex-shrink</code> to let them contract when the container becomes smaller. Try <code>flex-basis</code> to set the initial size of an element before the remaining space is distributed.</p>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>
