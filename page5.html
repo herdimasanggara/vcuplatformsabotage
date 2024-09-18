@@ -22,16 +22,16 @@
 
             <!-- Square with instructions -->
             <div class="list-item">
-                <p><strong>How to create a square in CSS?</strong></p>
-                <p>A square is simply a box with equal width and height. Here's the code to create a square:</p>
+                <p><strong>How to create a square in CSS?</strong></p><br>
+                <p>A square is simply a box with equal width and height. Here's the code to create a square:</p><br>
                 <div class="code-block">.square {
   width: 100px;
   height: 100px;
   background-color: lightgray;
-}</div>
+}</div><br>
 
-                <p><strong>How does the animation work?</strong></p>
-                <p>This square uses a CSS animation to move from left to right. The <code>@keyframes</code> rule defines the movement, and the animation is applied with the <code>animation</code> property:</p>
+                <p><strong>How does the animation work?</strong></p><br>
+                <p>This square uses a CSS animation to move from left to right. The <code>@keyframes</code> rule defines the movement, and the animation is applied with the <code>animation</code> property:</p><br>
                 <div class="code-block">@keyframes move {
   0% {
     transform: translateX(0);
@@ -43,25 +43,25 @@
 
 .square {
   animation: move 5s infinite alternate;
-}</div>
+}</div><br>
 
-                <p>Watch the square move left and right:</p>
+                <p>Watch the square move left and right:</p><br>
                 <div class="square"></div>
             </div>
 
             <!-- Circle with instructions -->
             <div class="list-item">
-                <p><strong>How to create a circle in CSS?</strong></p>
-                <p>A circle is created by setting the width and height of a box equally and applying a border-radius of 50%. Try this:</p>
+                <p><strong>How to create a circle in CSS?</strong></p><br>
+                <p>A circle is created by setting the width and height of a box equally and applying a border-radius of 50%. Try this:</p><br>
                 <div class="code-block">.circle {
   width: 100px;
   height: 100px;
   background-color: yellow;
   border-radius: 50%;
-}</div>
+}</div><br>
 
-                <p><strong>How does the animation work?</strong></p>
-                <p>The circle uses a color-changing animation. The <code>@keyframes</code> rule specifies the change from yellow to lightgray, and the animation is applied with the <code>animation</code> property:</p>
+                <p><strong>How does the animation work?</strong></p><br>
+                <p>The circle uses a color-changing animation. The <code>@keyframes</code> rule specifies the change from yellow to lightgray, and the animation is applied with the <code>animation</code> property:</p><br>
                 <div class="code-block">@keyframes colorChange {
   0% {
     background-color: yellow;
@@ -73,26 +73,26 @@
 
 .circle {
   animation: colorChange 3s infinite;
-}</div>
+}</div><br>
 
-                <p>Watch the circle change color:</p>
+                <p>Watch the circle change color:</p><br>
                 <div class="circle"></div>
             </div>
 
             <!-- Triangle with instructions -->
             <div class="list-item">
-                <p><strong>How to create a triangle in CSS?</strong></p>
-                <p>A triangle can be made using borders. The following code creates an upward-pointing triangle:</p>
+                <p><strong>How to create a triangle in CSS?</strong></p><br>
+                <p>A triangle can be made using borders. The following code creates an upward-pointing triangle:</p><br>
                 <div class="code-block">.triangle {
   width: 0;
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   border-bottom: 100px solid black;
-}</div>
+}</div><br>
 
-                <p><strong>How does the animation work?</strong></p>
-                <p>The triangle uses a shaking animation. The <code>@keyframes</code> rule defines slight movements to the left and right, creating a shake effect:</p>
+                <p><strong>How does the animation work?</strong></p><br>
+                <p>The triangle uses a shaking animation. The <code>@keyframes</code> rule defines slight movements to the left and right, creating a shake effect:</p><br>
                 <div class="code-block">@keyframes shake {
   0%, 100% {
     transform: translateX(0);
@@ -104,42 +104,42 @@
 
 .triangle {
   animation: shake 1s infinite;
-}</div>
+}</div><br>
 
-                <p>Watch the triangle shake:</p>
+                <p>Watch the triangle shake:</p><br>
                 <div class="triangle"></div>
             </div>
 
             <div class="list-item">
-              <p><strong>How to combine multiple shapes in CSS?</strong></p>
-              <p>By using CSS positioning, you can layer and combine different shapes to create more complex visuals. Here's an example where we combine a circle and a square to form a new shape:</p>
+              <p><strong>How to combine multiple shapes in CSS?</strong></p><br>
+              <p>By using CSS positioning, you can layer and combine different shapes to create more complex visuals. Here's an example where we combine a circle and a square to form a new shape:</p><br>
               
               <div class="code-block">.combined-container {
-            position: relative;
-            width: 150px;
-            height: 150px;
-          }
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
           
-          .combined-square {
-            width: 100px;
-            height: 100px;
-            background-color: lightgray;
-            position: absolute;
-            top: 25px;
-            left: 25px;
-          }
+.combined-square {
+  width: 100px;
+  height: 100px;
+  background-color: lightgray;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
           
-          .combined-circle {
-            width: 100px;
-            height: 100px;
-            background-color: yellow;
-            border-radius: 50%;
-            position: absolute;
-            top: 0;
-            left: 0;
-          }</div>
+.combined-circle {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}</div><br>
           
-              <p>In this example, a yellow circle is layered on top of a lightgray square to form a combined shape. You can use relative and absolute positioning to control how the shapes overlap:</p>
+              <p>In this example, a yellow circle is layered on top of a lightgray square to form a combined shape. You can use relative and absolute positioning to control how the shapes overlap:</p><br>
               <div class="combined-container">
                   <div class="combined-square"></div>
                   <div class="combined-circle"></div>
