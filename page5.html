@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Sabotage, 09/18, CSS Experiment (2/2)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Leftmost column: Navigation -->
+        <nav class="left-column">
+            <div class="link" onclick="location.href='index.html'">Home</div>
+            <div class="nested-links">
+                <div class="link" onclick="location.href='cssexp2.html'">CSS Experiment 2</div>
+            </div>
+        </nav>
+
+        <!-- Center column: Main content for CSS shapes -->
+        <main class="center-column">
+            <div class="title">09/18, CSS Shapes & Animations</div>
+
+            <!-- Square with instructions -->
+            <div class="list-item">
+                <p><strong>How to create a square in CSS?</strong></p>
+                <p>A square is simply a box with equal width and height. Here's the code to create a square:</p>
+                <div class="code-block">.square {
+  width: 100px;
+  height: 100px;
+  background-color: lightgray;
+}</div>
+
+                <p><strong>How does the animation work?</strong></p>
+                <p>This square uses a CSS animation to move from left to right. The <code>@keyframes</code> rule defines the movement, and the animation is applied with the <code>animation</code> property:</p>
+                <div class="code-block">@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(200px);
+  }
+}
+
+.square {
+  animation: move 5s infinite alternate;
+}</div>
+
+                <p>Watch the square move left and right:</p>
+                <div class="square"></div>
+            </div>
+
+            <!-- Circle with instructions -->
+            <div class="list-item">
+                <p><strong>How to create a circle in CSS?</strong></p>
+                <p>A circle is created by setting the width and height of a box equally and applying a border-radius of 50%. Try this:</p>
+                <div class="code-block">.circle {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border-radius: 50%;
+}</div>
+
+                <p><strong>How does the animation work?</strong></p>
+                <p>The circle uses a color-changing animation. The <code>@keyframes</code> rule specifies the change from yellow to lightgray, and the animation is applied with the <code>animation</code> property:</p>
+                <div class="code-block">@keyframes colorChange {
+  0% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: lightgray;
+  }
+}
+
+.circle {
+  animation: colorChange 3s infinite;
+}</div>
+
+                <p>Watch the circle change color:</p>
+                <div class="circle"></div>
+            </div>
+
+            <!-- Triangle with instructions -->
+            <div class="list-item">
+                <p><strong>How to create a triangle in CSS?</strong></p>
+                <p>A triangle can be made using borders. The following code creates an upward-pointing triangle:</p>
+                <div class="code-block">.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid black;
+}</div>
+
+                <p><strong>How does the animation work?</strong></p>
+                <p>The triangle uses a shaking animation. The <code>@keyframes</code> rule defines slight movements to the left and right, creating a shake effect:</p>
+                <div class="code-block">@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+}
+
+.triangle {
+  animation: shake 1s infinite;
+}</div>
+
+                <p>Watch the triangle shake:</p>
+                <div class="triangle"></div>
+            </div>
+
+            <div class="list-item">
+              <p><strong>How to combine multiple shapes in CSS?</strong></p>
+              <p>By using CSS positioning, you can layer and combine different shapes to create more complex visuals. Here's an example where we combine a circle and a square to form a new shape:</p>
+              
+              <div class="code-block">.combined-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+          }
+          
+          .combined-square {
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+          }
+          
+          .combined-circle {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }</div>
+          
+              <p>In this example, a yellow circle is layered on top of a lightgray square to form a combined shape. You can use relative and absolute positioning to control how the shapes overlap:</p>
+              <div class="combined-container">
+                  <div class="combined-square"></div>
+                  <div class="combined-circle"></div>
+              </div>
+          </div>
+          
+
+            <!-- Trapezoid with instructions
+            <div class="list-item">
+                <p><strong>How to create a trapezoid in CSS?</strong></p>
+                <p>A trapezoid is another shape made with border manipulation. Here's how you can create it:</p>
+                <div class="code-block">.trapezoid {
+  width: 150px;
+  height: 0;
+  border-bottom: 100px solid yellow;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}</div>
+
+                <p><strong>How does the animation work?</strong></p>
+                <p>The trapezoid moves from left to right and changes color between yellow and lightgray. The <code>@keyframes</code> rule defines both the movement and color change:</p>
+                <div class="code-block">@keyframes moveAndColor {
+  0% {
+    transform: translateX(0);
+    background-color: yellow;
+  }
+  100% {
+    transform: translateX(200px);
+    background-color: lightgray;
+  }
+}
+
+.trapezoid {
+  animation: moveAndColor 4s infinite alternate;
+}</div>
+
+                <p>Watch the trapezoid move and change color:</p>
+                <div class="trapezoid"></div>
+            </div> -->
+
+            <!-- Rhombus with instructions
+            <div class="list-item">
+                <p><strong>How to create a rhombus in CSS?</strong></p>
+                <p>A rhombus is created by rotating a square. Here's the code:</p>
+                <div class="code-block">.rhombus {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  transform: rotate(45deg);
+}</div>
+
+                <p><strong>How does the animation work?</strong></p>
+                <p>The rhombus moves from left to right using the same <code>@keyframes</code> rule as the square:</p>
+                <div class="code-block">@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(200px);
+  }
+
+.rhombus {
+  animation: move 3s infinite alternate;
+}</div>
+
+                <p>Watch the rhombus move:</p>
+                <div class="rhombus"></div>
+            </div> -->
+        </main>
+
+        <!-- Rightmost column: Additional CSS tips -->
+        <aside class="right-column">
+          <div class="text">
+            <p>Experiment with combining multiple shapes to create more complex designs. For example, try layering a square on top of a circle, or placing multiple triangles together to form new shapes.</p></div>
+            <div class="text"><p>You can also multiply or repeat shapes to form patterns or unique structures. Imagine using several rhombuses to create a grid or using trapezoids to form a staircase-like pattern.</p></div>
+            <div class="text"><p>Don't forget, you can animate the combined shapes together or individually. Try synchronizing movements, rotations, or color changes across multiple shapes.</p>
+        </div>
+        
+        </aside>
+    </div>
+</body>
+</html>

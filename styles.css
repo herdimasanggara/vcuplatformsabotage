@@ -205,3 +205,113 @@ hr {
   display: block;
   margin: 20px auto;
 }
+
+/* Square */
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: lightgray;
+  animation: move 5s infinite alternate;
+}
+
+/* Circle */
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border-radius: 50%;
+  animation: colorChange 3s infinite;
+}
+
+/* Triangle */
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid black;
+  animation: shake 1s infinite;
+}
+
+/* Trapezoid */
+.trapezoid {
+  width: 150px;
+  height: 0;
+  border-bottom: 100px solid yellow;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  animation: moveAndColor 4s infinite alternate;
+}
+
+/* Rhombus */
+.rhombus {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  transform: rotate(45deg);
+  animation: move 3s infinite alternate;
+}
+
+/* Animations */
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(200px);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: lightgray;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes moveAndColor {
+  0% {
+    transform: translateX(0);
+    background-color: yellow;
+  }
+  100% {
+    transform: translateX(200px);
+    background-color: lightgray;
+  }
+}
+
+.combined-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.combined-square {
+  width: 100px;
+  height: 100px;
+  background-color: lightgray;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.combined-circle {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

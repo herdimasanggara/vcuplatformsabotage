@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Platform Sabotage Recap FAQ</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Left column -->
+    <nav class="left-column">
+      <div class="link" onclick="location.href='index.html'">Home</div>
+    </nav>
+
+    <!-- Center column with FAQ -->
+    <main class="center-column">
+      <div class="title">Recap, CSS</div>
+
+      <div class="list-item">
+        <strong>Why exactly do we have to put a dot in front of a class name?</strong><br><br>
+        In CSS, the dot (.) before a class name tells the browser that you're selecting an element based on its class attribute. For example, <code>.example</code> targets all elements with the class <code>example</code>.
+      </div>
+
+      <div class="list-item">
+        <strong>Why sometimes there's no dot (like when we use <code>*</code> or <code>body</code>)?</strong><br><br>
+        The asterisk (<code>*</code>) is a universal selector that selects all elements, while <code>body</code> selects the <code>&lt;body&gt;</code> tag specifically. We don't use a dot here because these are not classes, they're direct element selectors.
+      </div>
+
+      <div class="list-item">
+        <strong>Can we combine multiple classes in one <code>&lt;div&gt;</code>?</strong><br><br>
+        Yes, you can apply multiple classes to one element by listing them in the <code>class</code> attribute separated by spaces, like this: <code>&lt;div class="class1 class2"&gt;&lt;/div&gt;</code>. Each class will apply its respective styles to the element.
+      </div>
+
+      <div class="list-item">
+        <strong>Why should we use CSS styles instead of inline styles?</strong><br><br>
+        CSS styles in a separate file or style block keep your code cleaner and easier to maintain. Inline styles mix content with presentation, which can make updates difficult, especially on large websites. By using external or embedded CSS, you ensure consistency across multiple elements and pages.
+      </div>
+
+      <div class="list-item">
+        <strong>Why doesn't my CSS work?</strong><br><br>
+        
+        This usually comes down to simple syntax issues. One common mistake is forgetting to put a semicolon at the end of each CSS declaration. The semicolon acts as a separator, letting the browser know you've finished specifying a property. For instance, the following rule might not work as expected because it's missing a semicolon after the <code>color</code> property:<br><br>
+        
+        <div class="code-block">.example {
+&nbsp;&nbsp;color: blue
+&nbsp;&nbsp;font-size: 20px;
+}</div><br>
+        
+        To fix it, just add the missing semicolon:<br><br>
+        
+        <div class="code-block">.example {
+&nbsp;&nbsp;color: blue;
+&nbsp;&nbsp;font-size: 20px;
+}</div><br>
+        
+Another common issue is forgetting to close the curly brackets <code>{}</code> around your CSS rules. If the browser doesn't see that closing bracket, it won't apply the styles at all. Here's an example where the rule is missing a closing bracket:<br><br>
+        
+        <div class="code-block">.example {
+&nbsp;&nbsp;background-color: yellow;
+&nbsp;&nbsp;font-weight: bold;
+</div><br>
+        
+        The corrected version should look like this:<br><br>
+        
+        <div class="code-block">.example {
+&nbsp;&nbsp;background-color: yellow;
+&nbsp;&nbsp;font-weight: bold;
+}</div><br>
+      
+        So always double-check your CSS for missing semicolons and ensure all curly brackets are properly closed!
+      </div>
+      
+
+      <div class="list-item">
+        <strong>Help! I created shapes, but they're not showing up on my website. What could be wrong?</strong><br><br>
+        
+        Let's say you created some shapes in CSS like this:<br><br>
+      
+        <div class="code-block">.square {
+&nbsp;&nbsp;width: 100px;
+&nbsp;&nbsp;height: 100px;
+&nbsp;&nbsp;background-color: lightgray;
+}<br>
+.circle {
+&nbsp;&nbsp;width: 100px;
+&nbsp;&nbsp;height: 100px;
+&nbsp;&nbsp;border-radius: 50%;
+}</div><br>
+        
+        You might wonder, "Why isn't the circle showing up on my webpage?" <br><br>
+        
+        A common issue is forgetting to give the shape a background color. For example, in the circle class above, we defined the width, height, and border-radius to make it round, but since we didn’t add a <code>background-color</code>, it remains invisible.<br><br>
+        
+        Here's the corrected CSS for the circle:<br><br>
+      
+        <div class="code-block">.circle {
+&nbsp;&nbsp;width: 100px;
+&nbsp;&nbsp;height: 100px;
+&nbsp;&nbsp;border-radius: 50%;
+&nbsp;&nbsp;background-color: yellow;
+}</div><br>
+      
+        After defining the width and height, always remember to "fill" your shapes by adding a background color (or any other styling like borders) to make them visible!
+      </div>
+      
+    </main>
+
+    <!-- Right column -->
+    <aside class="right-column">
+      <div class="text">
+        Remember, proper class usage and clean CSS help make your website more maintainable!
+      </div>
+      <div class="text">
+        Save and preview your work regularly to catch mistakes early.
+      </div>
+    </aside>
+  </div>
+</body>
+</html>
